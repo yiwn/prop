@@ -1,0 +1,42 @@
+{
+  "name": "yiwn-prop",
+  "description": "Get or set properties of object.",
+  "version": "0.0.1",
+  "author": "Mushex Antaranian",
+  "license": "MIT",
+  "keywords": [
+    "get",
+    "set",
+    "prop",
+    "attr",
+    "yiwn"
+  ],
+  "homepage": "https://github.com/yiwn/prop",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/yiwn/prop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yiwn/prop/issues"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "yiwn-merge": "0.0.1",
+    "component-type": "^1.0.0"
+  },
+  "devDependencies": {
+    "component": "^1.0.0-rc5",
+    "mocha": "^1.20.1",
+    "jshint": "^2.5.1",
+    "chai": "^1.9.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "main": "index.js"
+}
