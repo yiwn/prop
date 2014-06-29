@@ -1,7 +1,7 @@
 {
   "name": "prop",
   "description": "Get or set properties of object.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "keywords": [
     "get",
@@ -12,8 +12,8 @@
   ],
   "repo": "yiwn/prop",
   "dependencies": {
-    "yiwn/merge": "~0.0.1",
-    "component/type": "^1.0.0"
+    "component/type": "^1.0.0",
+    "yiwn/extend": "^1.0.1"
   },
   "development": {},
   "main": "lib/prop.js",
