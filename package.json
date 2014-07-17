@@ -1,7 +1,7 @@
 {
   "name": "yiwn-prop",
   "description": "Get or set properties of object.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Mushex Antaranian",
   "license": "MIT",
   "keywords": [
@@ -29,8 +29,7 @@
   "devDependencies": {
     "component": "^1.0.0-rc5",
     "mocha": "^1.20.1",
-    "jshint": "^2.5.1",
-    "chai": "^1.9.1"
+    "jshint": "^2.5.1"
   },
   "directories": {
     "test": "test"

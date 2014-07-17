@@ -33,6 +33,7 @@ describe('prop', function(){
 
         equal(prop(source, 'b.c'), 2);
         equal(prop(source, 'f.g'), 5);
+        equal(prop(source, 'm.n'), void 0);
     });
 
     it('should work with undefined and null', function(){
