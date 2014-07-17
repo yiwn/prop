@@ -1,33 +1,44 @@
-var expect = require('chai').expect;
+var assert = require('assert');
 
 var prop = require('../index.js');
 
+var equal = assert.equal;
+
 describe('prop', function(){
-    it('should work with objects', function(){
-        var obj = { a: 1 };
+    var source;
 
-        prop(obj, 'b', 2);
+    beforeEach(function(){
+        source = {
+            a: 1,
+            b: { c: 2 },
+            d: false,
+            e: 0
+        };
+    });
 
-        prop(obj, { a: 3, c: 4 });
+    it('should set `key, value` input', function(){
+        prop(source, 'b', 2);
+        equal(source.b, 2);
+    });
 
-        expect(obj)
-            .to.eql({
-                a: 3,
-                b: 2,
-                c: 4
-            });
+    it('should set `{ key: value }` input', function(){
+        prop(source, { a: 3, b: 4 });
 
-        expect(prop(obj, 'a'))
-            .to.equal(3);
+        equal(source.a, 3);
+        equal(source.b, 4);
+    });
+
+    it('should get keys with `dot.notation` correctly', function(){
+        source['f.g'] = 5;
+
+        equal(prop(source, 'b.c'), 2);
+        equal(prop(source, 'f.g'), 5);
     });
 
     it('should work with undefined and null', function(){
-        var obj = prop(null, 'a', { text: 'hello' });
+        var obj = prop(void 0, 'a', 'hello');
 
-        expect(obj)
-            .to.eql({
-                a: { text: 'hello' }
-            });
+        equal(obj.a, 'hello');
     });
 
 });
