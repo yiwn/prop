@@ -31,7 +31,7 @@ prop(obj, { a: 50, b: [1, 2] }); // { a: 50, b: [1, 2], c: 'Britney' }
 
 ## Test
 
-Run tests with [mocha](http://visionmedia.github.io/mocha/)
+Run tests with [mocha](http://mochajs.org/)
 
     $ make test
 
